@@ -4,7 +4,9 @@ module workshop_javafx_javadbc {
     requires javafx.graphics;
 
     opens gui to javafx.fxml;          
-    opens application to javafx.fxml; 
+    opens application to javafx.graphics, javafx.fxml; 
     
     exports gui;
-    exports application;}
+    exports application;
+    opens model.entities to javafx.base;
+}
